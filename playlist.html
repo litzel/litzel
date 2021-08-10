@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>playlist</title>
+</head>
+<body>
+
+<video id="myVid" width="320" height="240" controls>
+  <source src="https://pixabay.com/videos/id-15305/">
+  your browser doesn't support video :(
+</video>
+
+<script>
+var myArray=['https://pixabay.com/videos/id-15305/',
+'https://pixabay.com/videos/id-16166/',
+'https://pixabay.com/videos/id-3063/',
+'https://pixabay.com/videos/id-83227/',
+'https://pixabay.com/videos/id-6281/'];
+var vid = document.getElementById("myVid");
+
+vid.addEventListener("ended", myFun); 
+
+function myFun() {
+  //document.querySelector("#myVid > source")
+  vid.src() = "myArray[Math.floor(Math.random()*5)]";
+  vid.play();
+}
+</script>
+
+</body>
+</html> 
